@@ -91,6 +91,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
+      - TEST_PROXY="https://example.com"
     volumes:
       - /path/to/appdata/config:/config
       - /path/to/downloads:/downloads
@@ -108,6 +109,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
+  -e TEST_PROXY="https://example.com" \
   -p 8000:8000 \
   -p 9666:9666 `#optional` \
   -v /path/to/appdata/config:/config \
